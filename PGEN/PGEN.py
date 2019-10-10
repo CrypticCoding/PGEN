@@ -9,7 +9,7 @@ import random
 
 
 
-TOKEN = 'NjMxMTIwNjg2NjkzMzUxNDI0.XZ1xug.K33l-VXwLJWrHv6ucE7SpK--xuY'
+
 client = commands.Bot(command_prefix='!')
 
 accounts = []
