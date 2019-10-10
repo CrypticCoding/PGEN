@@ -306,5 +306,5 @@ async def stockInfo(ctx, Type : str):
         await ctx.send("crunchyroll Account In Stock: {}".format(len(accounts)))
     
 
-
-client.run(str(os.environ.get('TOKEN')))
+f = open('token.txt').readline()
+client.run(f)
