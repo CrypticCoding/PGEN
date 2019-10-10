@@ -6,7 +6,7 @@ from discord import Embed
 import webbrowser
 import json
 import random
-
+import os
 
 
 
@@ -64,7 +64,7 @@ async def BotsInfo(ctx):
 
 
 @client.command()
-@commads.has_any_role("Admin", "administrator", "admin", "Moderator", "moderator", "Owner", "owner", "Dropper/Restocker", "dropper/restocker")        
+@commands.has_any_role("Admin", "administrator", "admin", "Moderator", "moderator", "Owner", "owner", "Dropper/Restocker", "dropper/restocker")        
 async def stock(ctx, Type:str, typeOfAccount:str, typeOfFile:str):
     if Type == 'add':
         if typeOfAccount == 'fortnite':
@@ -307,4 +307,4 @@ async def stockInfo(ctx, Type : str):
     
 
 
-client.run(TOKEN)
+client.run(str(os.environ.get('TOKEN')))
